@@ -6,9 +6,7 @@ import { loadData } from './redux/Actions/Actions';
 
 function App() {
 
-  const data = useSelector((state) => {
-    console.log(state)
-  })
+  const data = useSelector((state) => state.dataReducer.data )
 
   const dispatch = useDispatch();
 
@@ -16,6 +14,7 @@ function App() {
     dispatch(loadData());
   }, [])
 
+  console.log(data)
 
   return (
     <div>
