@@ -7,7 +7,7 @@ const initialData = {
 }
 
 export const dataReducer = (state = initialData, action) => {
-    
+
     switch(action.type){
         case USER_REQUEST:
             return {
@@ -23,7 +23,7 @@ export const dataReducer = (state = initialData, action) => {
         case GET_USER_FAILED:
             return {
                 ...state,
-                loading: true,
+                loading: false,
                 data: [],
                 error: action.payload
             }
