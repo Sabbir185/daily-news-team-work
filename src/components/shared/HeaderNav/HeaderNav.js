@@ -8,7 +8,7 @@ const HeaderNav = () => {
         <section className="container mt-2 sticky-top">
 
             <Navbar bg="" expand="lg">
-                <Navbar.Brand> <Link className="text-decoration-none">
+                <Navbar.Brand> <Link className="text-decoration-none" to="/">
                     <span className="logo">Daily News</span> </Link> 
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />

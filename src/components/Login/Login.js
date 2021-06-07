@@ -5,7 +5,6 @@ import firebaseConfig from '../../firebase.config';
 import logo from '../../images/Group 573.png'
 import './Login.css'
 import HeaderNav from '../shared/HeaderNav/HeaderNav';
-import { useContext } from 'react';
 import { useHistory, useLocation } from 'react-router';
 import { useDispatch } from 'react-redux';
 import { userLogin } from '../../redux/Actions/Actions';
@@ -17,9 +16,8 @@ if (!firebase.apps.length) {
 }
 
 const Login = () => {
-    // const [loggedInUser, setLoggedInUser] = useContext()
 
-    // let history = useHistory();
+    let history = useHistory();
     // let location = useLocation();
     // let { from } = location.state || { from: { pathname: "/" } };
 
@@ -34,8 +32,7 @@ const Login = () => {
             const token = credential.accessToken;
             const {displayName, email, photoURL} = result.user;
             const googleUserInfo = {name: displayName, email, photoURL};
-            // setLoggedInUser(googleUserInfo)
-            // history.replace(from)
+            history.push('/home')
             dispatch(userLogin(googleUserInfo))
         }).catch((error) => {
             const errorMessage = error.message;
@@ -47,7 +44,7 @@ const Login = () => {
             <HeaderNav />
             <section className="d-flex justify-content-center">
                 <div className="login">
-                    <h4 onClick={handleGoogleSignIn}> <img src={logo} alt="" srcset="" className="img-fluid" /> continue with <span>Google</span></h4>
+                    <h4  onClick={handleGoogleSignIn}> <img src={logo} alt="" srcset="" className="img-fluid" /> continue with <span>Google</span></h4>
                 </div>
             </section>
         </>
