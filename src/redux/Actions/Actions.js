@@ -6,28 +6,30 @@ export const USER_REQUEST = "USER_REQUEST";
 export const GET_USER_SUCCESS = "GET_USER_SUCCESS";
 export const GET_USER_FAILED = "GET_USER_SUCCESS";
 
-
 export const loadData = () => {
-    return async (dispatch) => {
-        try {
-            dispatch({
-                type: USER_REQUEST
-            })
 
-            const data = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${key}`);
+  return async (dispatch) => {
+    try {
+      dispatch({
+        type: USER_REQUEST,
+      });
 
-            dispatch({
-                type: GET_USER_SUCCESS,
-                payload: data.data
-            })
+    
+      const data = await axios.get(
+        `https://newsapi.org/v2/top-headlines?country=us&apiKey=${key}`
+      );
 
-        } catch (error) {
-            dispatch({
-                type: GET_USER_FAILED,
-                payload: error.message
-            })
-        }
+      dispatch({
+        type: GET_USER_SUCCESS,
+        payload: data.data,
+      });
+    } catch (error) {
+      dispatch({
+        type: GET_USER_FAILED,
+        payload: error.message,
+      });
     }
+
 }
 
 
@@ -37,3 +39,4 @@ export const userLogin = (payload) => {
         payload
     }
 }
+

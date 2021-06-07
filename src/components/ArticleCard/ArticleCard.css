@@ -1,0 +1,14 @@
+.article-card {
+  width: 500px;
+}
+.article-card:hover {
+  cursor: pointer;
+  width: 400px;
+  background: #000;
+  color: white;
+  transition-property: background;
+  transition-duration: 2s;
+}
+.article-card img {
+  width: 250px;
+}
