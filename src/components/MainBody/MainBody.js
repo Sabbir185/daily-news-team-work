@@ -28,9 +28,10 @@ const MainBody = () => {
 
         {/* it goes to sidebar */}
         <Col md={4}>
-          {data?.map((element) => (
+          <Sidebar></Sidebar>
+          {/* {data?.map((element) => (
             <Sidebar article={element}></Sidebar>
-          ))}
+          ))} */}
         </Col>
       </Row>
     </Container>
