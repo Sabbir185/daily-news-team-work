@@ -1,7 +1,15 @@
 .color {
-    color: gray;
+    color: rgb(99, 97, 97);
     font-weight: 500;
+    transition: all .2s ease-out;
 }
 .color:hover {
     color: black;
+    transform: translate(-3);
 }
+
+.logo {
+    color: black;
+    font-weight: 700;
+}
+

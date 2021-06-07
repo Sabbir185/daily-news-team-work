@@ -1,0 +1,23 @@
+.login {
+    margin-top: 10%;
+    padding: 50px 150px;
+    background-color: lightgrey;
+    box-shadow: 1px 1px 10px lightslategray;
+}
+.login img{
+    width: 50px;
+    margin-right: 10px;
+}
+.login h4{
+    border: 2px dotted tomato;
+    border-radius: 100px;
+    padding: 10px;
+    
+}
+.login h4:hover{
+    box-shadow: 5px 10px 20px white;
+    cursor: pointer;
+}
+.login h4:active{
+    box-shadow: 1px 5px 10px white;
+}

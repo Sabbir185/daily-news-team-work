@@ -7,8 +7,10 @@ const HeaderNav = () => {
     return (
         <section className="container mt-2 sticky-top">
 
-            <Navbar bg="light" expand="lg">
-                <Navbar.Brand className="color">Daily News</Navbar.Brand>
+            <Navbar bg="" expand="lg">
+                <Navbar.Brand> <Link className="text-decoration-none">
+                    <span className="logo">Daily News</span> </Link> 
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">
@@ -18,6 +20,8 @@ const HeaderNav = () => {
                         <Nav.Link> <Link className="mr-2 text-decoration-none color" to=''>Technology</Link> </Nav.Link>
                         <Nav.Link> <Link className="mr-2 text-decoration-none color" to=''>Education</Link> </Nav.Link>
                         <Nav.Link> <Link className="mr-2 text-decoration-none color" to=''>About Us</Link> </Nav.Link>
+
+                        <Nav.Link> <Link to='/login' className="mr-2 text-decoration-none color"><button className="btn btn-success btn-sm">Login</button></Link> </Nav.Link>
                     </Nav>
 
                 </Navbar.Collapse>

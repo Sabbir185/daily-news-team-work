@@ -1,0 +1,52 @@
+import React from 'react';
+import firebase from "firebase/app";
+import "firebase/auth";
+import firebaseConfig from '../../firebase.config';
+import logo from '../../images/Group 573.png'
+import './Login.css'
+import HeaderNav from '../shared/HeaderNav/HeaderNav';
+import { useContext } from 'react';
+import { useHistory, useLocation } from 'react-router';
+
+if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig);
+} else {
+    firebase.app();
+}
+
+const Login = () => {
+    // const [loggedInUser, setLoggedInUser] = useContext()
+
+    // let history = useHistory();
+    // let location = useLocation();
+    // let { from } = location.state || { from: { pathname: "/" } };
+
+    const handleGoogleSignIn = () => {
+        const provider = new firebase.auth.GoogleAuthProvider();
+        firebase.auth()
+        .signInWithPopup(provider)
+        .then((result) => {
+            const credential = result.credential;
+            const token = credential.accessToken;
+            const {displayName, email, photoURL} = result.user;
+            const googleUserInfo = {name: displayName, email, photoURL};
+            // setLoggedInUser(googleUserInfo)
+            // history.replace(from)
+        }).catch((error) => {
+            const errorMessage = error.message;
+        });
+    }
+
+    return (
+        <>
+            <HeaderNav />
+            <section className="d-flex justify-content-center">
+                <div className="login">
+                    <h4 onClick={handleGoogleSignIn}> <img src={logo} alt="" srcset="" className="img-fluid" /> continue with <span>Google</span></h4>
+                </div>
+            </section>
+        </>
+    );
+};
+
+export default Login;
