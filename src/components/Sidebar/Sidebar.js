@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import SidebarCard from './SidebarCard';
 
 const Sidebar = () => {
-    const data = useSelector((state) => state.dataReducer.data.articles);
+    const data = useSelector((state) => state.dataReducer.data);
 
     return (
         <aside >

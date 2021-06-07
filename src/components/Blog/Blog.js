@@ -8,7 +8,7 @@ import HeaderNav from "../shared/HeaderNav/HeaderNav";
 const Blog = () => {
   const { date } = useParams();
 
-  const data = useSelector((state) => state.dataReducer.data.articles);
+  const data = useSelector((state) => state.dataReducer.data);
 
   const blog = data?.find((blog) => blog.publishedAt === date);
   const { urlToImage, title, content, description } = blog;

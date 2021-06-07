@@ -1,5 +1,4 @@
 import axios from "axios";
-import { key } from "../../api_key";
 
 export const LOAD_DATA = "LOAD_DATA";
 export const USER_REQUEST = "USER_REQUEST";
@@ -14,9 +13,8 @@ export const loadData = () => {
         type: USER_REQUEST,
       });
 
-
       const data = await axios.get(
-        `https://newsapi.org/v2/top-headlines?country=us&apiKey=${key}`
+        `https://nameless-beyond-33007.herokuapp.com/blogs`
       );
 
       dispatch({

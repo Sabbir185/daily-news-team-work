@@ -11,7 +11,7 @@ import HeaderNav from '../shared/HeaderNav/HeaderNav';
 
 
 const Home = () => {
-    const data = useSelector((state) => state.dataReducer.data.articles);
+    const data = useSelector((state) => state.dataReducer.data);
 
     const dispatch = useDispatch();
 
@@ -19,7 +19,7 @@ const Home = () => {
         dispatch(loadData());
     }, []);
 
-
+    
     return (
         <div>
             <HeaderNav />

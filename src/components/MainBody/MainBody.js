@@ -6,16 +6,8 @@ import ArticleCard from "../ArticleCard/ArticleCard";
 import Sidebar from "../Sidebar/Sidebar";
 
 const MainBody = ({ data }) => {
-  // const data = useSelector((state) => state.dataReducer.data.articles);
+  // const data = useSelector((state) => state.dataReducer.data);
 
-  // const dispatch = useDispatch();
-
-  // useEffect(() => {
-  //   dispatch(loadData());
-  // }, []);
-
-
-  // console.log(data);
   return (
     <Container>
       <Row>
