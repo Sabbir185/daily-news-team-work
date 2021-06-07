@@ -14,9 +14,9 @@ function App() {
   return (
     <Router>
       <Switch>
-        <PrivateRoute exact path="/">
+        <Route exact path="/">
           <Home />
-        </PrivateRoute>
+        </Route>
 
         <Route path="/home">
           <Home />

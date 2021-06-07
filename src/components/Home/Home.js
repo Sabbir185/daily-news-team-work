@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {loadData} from '../../redux/Actions/Actions'
-import PrivateRoute from '../Login/PrivateRoute';
+import MainBody from '../MainBody/MainBody';
 import HeaderNav from '../shared/HeaderNav/HeaderNav';
 
 
@@ -15,11 +15,11 @@ const Home = () => {
         dispatch(loadData());
     }, [])
 
-    console.log(data)
+    // console.log(data)
     return (
         <div>
             <HeaderNav />
-            <h1>Home</h1>
+            <MainBody />
 
         </div>
     );

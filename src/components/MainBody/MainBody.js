@@ -3,24 +3,27 @@ import { Col, Container, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { loadData } from "../../redux/Actions/Actions";
 import ArticleCard from "../ArticleCard/ArticleCard";
+import Sidebar from "../Sidebar/Sidebar";
 
 const MainBody = () => {
   const data = useSelector((state) => state.dataReducer.data.articles);
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(loadData());
-  }, []);
+  // useEffect(() => {
+  //   dispatch(loadData());
+  // }, []);
 
-  console.log(data);
   return (
     <Container>
       <Row>
         <Col md={8}>
-          {data?.map((elm) => (
+          {/* {data?.map((elm) => (
             <ArticleCard article={elm} />
-          ))}
+          ))} */}
+        </Col>
+        <Col md={4}>
+          <Sidebar />
         </Col>
       </Row>
     </Container>

@@ -1,9 +1,13 @@
 import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import './HeaderNav.css'
 
 const HeaderNav = () => {
+    const userInfo = useSelector((state) => state.userReducer.userInfo);
+
+
     return (
         <section className="container mt-2 sticky-top">
 
@@ -21,7 +25,12 @@ const HeaderNav = () => {
                         <Nav.Link> <Link className="mr-2 text-decoration-none color" to=''>Education</Link> </Nav.Link>
                         <Nav.Link> <Link className="mr-2 text-decoration-none color" to=''>About Us</Link> </Nav.Link>
 
-                        <Nav.Link> <Link to='/login' className="mr-2 text-decoration-none color"><button className="btn btn-success btn-sm">Login</button></Link> </Nav.Link>
+                        {
+                            userInfo.name ? 
+                            <Nav.Link> <Link className="mr-2 text-decoration-none user">{userInfo.name}</Link> </Nav.Link>
+                            :
+                            <Nav.Link> <Link to='/login' className="mr-2 text-decoration-none color"><button className="btn btn-success btn-sm">Login</button></Link> </Nav.Link>
+                        }
                     </Nav>
 
                 </Navbar.Collapse>

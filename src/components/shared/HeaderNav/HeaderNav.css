@@ -13,3 +13,14 @@
     font-weight: 700;
 }
 
+.user {
+    background-color: lightblue;
+    border-radius: 100px;
+    padding: 5px;
+    border: 1px dotted tomato;
+    color: green;
+}
+.user:hover {
+    color: black;
+}
+
