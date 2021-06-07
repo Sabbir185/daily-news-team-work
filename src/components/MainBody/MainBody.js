@@ -3,6 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 // import { useDispatch, useSelector } from "react-redux";
 // import { loadData } from "../../redux/Actions/Actions";
 import ArticleCard from "../ArticleCard/ArticleCard";
+import Sidebar from "../Sidebar/Sidebar";
 
 const MainBody = ({ data }) => {
   // const data = useSelector((state) => state.dataReducer.data.articles);
@@ -12,6 +13,7 @@ const MainBody = ({ data }) => {
   // useEffect(() => {
   //   dispatch(loadData());
   // }, []);
+
 
   // console.log(data);
   return (
@@ -24,8 +26,10 @@ const MainBody = ({ data }) => {
             ))}
           </Row>
         </Col>
-        <Col>
-          <h1>add sidebar here 🙌 </h1>
+        
+        <Col md={4}>
+          <Sidebar />
+
         </Col>
       </Row>
     </Container>

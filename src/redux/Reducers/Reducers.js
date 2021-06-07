@@ -32,3 +32,23 @@ export const dataReducer = (state = initialData, action) => {
             return state;
     }
 }
+
+
+
+// Gmail user login info
+
+const initalUser = {
+    userInfo:'' ,
+}
+
+export const userReducer = (state = initalUser, action) => {
+    switch(action.type){
+        case "user_login":
+            return {
+                ...state,
+                userInfo: action.payload 
+            }
+        default:
+            return state;
+    }
+}

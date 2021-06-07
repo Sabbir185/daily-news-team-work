@@ -7,12 +7,14 @@ export const GET_USER_SUCCESS = "GET_USER_SUCCESS";
 export const GET_USER_FAILED = "GET_USER_SUCCESS";
 
 export const loadData = () => {
+
   return async (dispatch) => {
     try {
       dispatch({
         type: USER_REQUEST,
       });
 
+    
       const data = await axios.get(
         `https://newsapi.org/v2/top-headlines?country=us&apiKey=${key}`
       );
@@ -27,5 +29,14 @@ export const loadData = () => {
         payload: error.message,
       });
     }
-  };
-};
+
+}
+
+
+export const userLogin = (payload) => {
+    return {
+        type: "user_login",
+        payload
+    }
+}
+
