@@ -2,7 +2,7 @@ import React from 'react';
 import SimpleReactFooter from "simple-react-footer";
 
 const Footer = () => {
-    const description = "According to wikipedia, the cat (Felis catus) is a domestic species of small carnivorous mammal. It is the only domesticated species in the family Felidae and is often referred to as the domestic cat to distinguish it from the wild members of the family. A cat can either be a house cat, a farm cat or a feral cat; the latter ranges freely and avoids human contact.";
+    const description = "We are team 203 from Programming Hero Batch 3. This project is done as an assignment during SCIC. This is a simple news paper website. Where you can find News. You can find out all the latest news in right side.";
     const title = "Team 203 Programming Hero";
     const columns = [
         {
@@ -40,14 +40,18 @@ const Footer = () => {
             ]
         },
         {
-            title: "Visit",
+            title: "Team",
             resources: [
                 {
-                    name: "Locations",
-                    link: "/locations"
+                    name: "Owali",
+                    link: "https://github.com/OwaliShawon"
                 },
                 {
-                    name: "Culture",
+                    name: "Sabbir",
+                    link: "https://github.com/Sabbir185"
+                },
+                {
+                    name: "Mainul",
                     link: "/culture"
                 }
             ]
@@ -59,13 +63,13 @@ const Footer = () => {
                 description={description}
                 title={title}
                 columns={columns}
-                linkedin="fluffy_cat_on_linkedin"
+                linkedin="https://github.com/Sabbir185/daily-news-team-work"
                 facebook="fluffy_cat_on_fb"
                 twitter="fluffy_cat_on_twitter"
                 instagram="fluffy_cat_live"
                 youtube="UCFt6TSF464J8K82xeA?"
                 pinterest="fluffy_cats_collections"
-                copyright="black"
+                copyright="Team 203"
                 iconColor="black"
                 backgroundColor="bisque"
                 fontColor="black"
