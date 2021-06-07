@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import MainHeader from '../MainHeader/MainHeader';
-import {loadData} from '../../redux/Actions/Actions'
+import { loadData } from '../../redux/Actions/Actions';
+import MainBody from '../MainBody/MainBody';
+import Footer from '../shared/Footer/Footer';
 import HeaderNav from '../shared/HeaderNav/HeaderNav';
-import Login from '../Login/Login';
 
 
 const Home = () => {
@@ -20,6 +20,8 @@ const Home = () => {
         <div>
             <HeaderNav />
             <h1>Home</h1>
+            <MainBody></MainBody>
+            <Footer></Footer>
         </div>
     );
 };

@@ -14,7 +14,7 @@ export const loadData = () => {
                 type: USER_REQUEST
             })
 
-            const data = await axios.get(`https://newsapi.org/v2/everything?q=tesla&from=2021-05-06&sortBy=publishedAt&apiKey=${key}`);
+            const data = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${key}`);
 
             dispatch({
                 type: GET_USER_SUCCESS,
