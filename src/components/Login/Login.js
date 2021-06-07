@@ -7,6 +7,8 @@ import './Login.css'
 import HeaderNav from '../shared/HeaderNav/HeaderNav';
 import { useContext } from 'react';
 import { useHistory, useLocation } from 'react-router';
+import { useDispatch } from 'react-redux';
+import { userLogin } from '../../redux/Actions/Actions';
 
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
@@ -21,6 +23,8 @@ const Login = () => {
     // let location = useLocation();
     // let { from } = location.state || { from: { pathname: "/" } };
 
+    const dispatch = useDispatch();
+
     const handleGoogleSignIn = () => {
         const provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth()
@@ -32,6 +36,7 @@ const Login = () => {
             const googleUserInfo = {name: displayName, email, photoURL};
             // setLoggedInUser(googleUserInfo)
             // history.replace(from)
+            dispatch(userLogin(googleUserInfo))
         }).catch((error) => {
             const errorMessage = error.message;
         });

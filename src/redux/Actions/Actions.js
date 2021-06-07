@@ -29,3 +29,11 @@ export const loadData = () => {
         }
     }
 }
+
+
+export const userLogin = (payload) => {
+    return {
+        type: "user_login",
+        payload
+    }
+}
