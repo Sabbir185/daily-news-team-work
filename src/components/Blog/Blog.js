@@ -10,12 +10,6 @@ const Blog = () => {
 
   const data = useSelector((state) => state.dataReducer.data.articles);
 
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(loadData());
-  }, []);
-
   const blog = data?.find((blog) => blog.publishedAt === date);
   const { urlToImage, title, content, description } = blog;
 

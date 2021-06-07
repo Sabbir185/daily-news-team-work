@@ -8,9 +8,9 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/">
+        <PrivateRoute exact path="/">
           <Home />
-        </Route>
+        </PrivateRoute>
 
         <Route path="/home">
           <Home />

@@ -19,7 +19,7 @@ const MainBody = ({ data }) => {
   return (
     <Container>
       <Row>
-        <Col md={8} className="d-flex">
+        <Col md={8} className="d-flex mt-5">
           <Row md={3} className="gs-3">
             {data?.map((elm) => (
               <ArticleCard article={elm} />

@@ -9,9 +9,9 @@ const HeaderNav = () => {
 
 
     return (
-        <section className="container mt-2 sticky-top">
+        <section className="container-fluid mt-2 sticky-top">
 
-            <Navbar bg="" expand="lg">
+            <Navbar bg="light" expand="lg">
                 <Navbar.Brand> <Link className="text-decoration-none" to="/">
                     <span className="logo">Daily News</span> </Link> 
                 </Navbar.Brand>

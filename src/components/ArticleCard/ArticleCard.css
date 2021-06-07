@@ -1,5 +1,6 @@
 .article-card {
   width: 500px;
+  margin-bottom: 10px;
 }
 .article-card:hover {
   cursor: pointer;
@@ -7,7 +8,7 @@
   background: #000;
   color: white;
   transition-property: background;
-  transition-duration: 2s;
+  transition-duration: 1s;
 }
 .article-card img {
   width: 250px;

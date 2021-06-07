@@ -11,7 +11,7 @@ const ArticleCard = ({ article }) => {
       onClick={() => history.push("/blog/" + publishedAt)}
     >
       <img src={urlToImage} alt="" />
-      <h3>{title}</h3>
+      <h6>{title}</h6>
     </div>
   );
 };
